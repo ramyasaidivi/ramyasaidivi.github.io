@@ -1,0 +1,481 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+}
+
+/* Navbar */
+header {
+  background: #111;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  transition: max-height 0.5s ease-in-out, padding 0.3s ease;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6b6b;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1100; /* stay above menu */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff6b6b, #f7b733);
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-text span {
+  color: #222;
+  background: #fff;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+.hero-text p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.hero-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #222;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff6b6b;
+}
+
+/* Section Titles */
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* About Section */
+.about {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+/* Performance: Skip rendering for off-screen sections */
+section { content-visibility: auto; }
+
+.about p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.about { contain-intrinsic-size: 350px; }
+
+/* Skills Section */
+.skills {
+  background: #f7f7f7;
+  padding: 60px 20px;
+}
+.skills { contain-intrinsic-size: 1000px; }
+.skills-category {
+  background: #fff;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.skills-category h3 {
+  font-size: 1.5rem;
+  color: #ff6b6b;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 15px 10px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  font-weight: 500;
+  cursor: default;
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+  background: #ff6b6b;
+  color: #fff;
+}
+
+/* Experience Section */
+.experience {
+  background: #fff;
+  padding: 60px 20px;
+}
+.experience { contain-intrinsic-size: 600px; }
+
+.exp-card {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-left: 5px solid #ff6b6b;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.exp-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.exp-card h3 {
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.exp-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.exp-card ul {
+  margin-left: 20px;
+  list-style: disc;
+  color: #444;
+}
+
+/* Projects Section */
+.projects {
+  padding: 60px 20px;
+  background: #f7f7f7;
+}
+.projects { contain-intrinsic-size: 400px; }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.project-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #ff6b6b;
+}
+
+/* Contact Section */
+.contact {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.contact { contain-intrinsic-size: 350px; }
+
+.contact-email {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.contact-email i {
+  margin-right: 8px;
+  color: #ff6b6b;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ff6b6b;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+/* Responsive & Hamburger Menu */
+@media (max-width: 992px) {
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .hero-photo img {
+    width: 150px;
+    height: 150px;
+  }
+  .exp-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .company-logo {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hide logo on mobile */
+  .logo {
+    display: none;
+  }
+
+  /* Hamburger visible and stay right */
+  .hamburger {
+    display: block;
+    z-index: 1100;
+  }
+
+  nav {
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  /* Nav links hidden by default */
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    background: #111;
+    position: absolute;
+    top: 100%; /* just below header */
+    left: 0;
+    padding: 0; /* no padding initially */
+    border-radius: 0 0 8px 8px;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+  }
+
+  /* Expand menu when active */
+  .nav-links.active {
+    max-height: 1000px; /* enough to fit all links */
+    padding: 10px 20px; /* padding applied when expanded */
+  }
+
+  .nav-links li {
+    margin-left: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-photo img {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  .skills-category h3 {
+    font-size: 1.3rem;
+  }
+  .skill-card {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+  .exp-card ul {
+    margin-left: 15px;
+  }
+}
+
+/* Certifications Section */
+.certifications {
+  background: #f7f7f7;
+  padding: 60px 20px;
+}
+
+.certifications-category {
+  background: #fff;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.certifications h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.certifications-category h3 {
+  font-size: 1.5rem;
+  color: #ff6b6b;
+  margin-bottom: 20px;
+}
+
+.certifications-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.certifications-list li {
+  background: #fff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  color: #444;
+  list-style: none;
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+.certifications-list li:hover {
+  transform: scale(1.1);
+  background: #ff6b6b;
+  color: #fff;
+}
