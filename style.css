@@ -128,19 +128,21 @@ nav {
    HERO
 --------------------------------*/
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #ff6b6b, #f7b733);
+  background: var(--bg-gradient);
   color: #fff;
-  padding: 60px 20px;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero-content {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
-  max-width: 1000px;
+  gap: 40px;
 }
 
 .hero-text {
@@ -148,10 +150,8 @@ nav {
 }
 
 .hero-text h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 10px;
-  white-space: nowrap;
-  text-align: left;
 }
 
 .hero-text span {
@@ -322,7 +322,7 @@ nav {
 }
 
 .cert-card {
-  background: rgba(255, 107, 107, 0.1);
+  background: #fff;
   border-left: 4px solid var(--primary);
   padding: 20px;
   border-radius: 10px;
@@ -368,7 +368,7 @@ nav {
 }
 
 .rec-card {
-  background: rgba(247, 183, 51, 0.1);
+  background: #f7f7f7;
   border-left: 4px solid var(--secondary);
   padding: 20px;
   border-radius: 8px;
