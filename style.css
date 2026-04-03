@@ -322,7 +322,7 @@ nav {
 }
 
 .cert-card {
-  background: #fff;
+  background: rgba(255, 107, 107, 0.1);
   border-left: 4px solid var(--primary);
   padding: 20px;
   border-radius: 10px;
@@ -368,7 +368,7 @@ nav {
 }
 
 .rec-card {
-  background: #f7f7f7;
+  background: rgba(247, 183, 51, 0.1);
   border-left: 4px solid var(--secondary);
   padding: 20px;
   border-radius: 8px;
